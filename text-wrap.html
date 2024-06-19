@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+    style property:- this property is used to apply scc properties using js.
+    this is used to create css document in js;
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt1">Techsima</h1>
+    <h2 id="txt2">Raj</h2>
+    <h3 id="txt3">Ram</h3>
+    <button onclick="wrap()" id="btn">Text Wrap</button>
+    <script>
+        const wrap=()=>{
+        let design=document.querySelector("#txt1");
+        design.style.fontSize="50px";
+        let design2=document.querySelector("#txt2");
+        design2.style.backgroundColor="red";
+        design.style.color="orange";
+        let butun=document.querySelector("#btn");
+        butun.style.backgroundColor="skyBlue";
+        let v1=design.innerHTML;
+        let v2=design2.innerHTML;
+        design.innerHTML=v2;
+        design2.innerHTML=v1;
+        }
+    </script>
+</body>
+</html>

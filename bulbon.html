@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <img src="images/bulb2.jpg" alt="onn" id="im" height="300px">
+   <input type="submit" id="btn" onclick="bulb()" value="ON" style="background-color: green; border: 2px solid purple; color: #fff;">
+   <script>
+    let bulb=()=>{
+        let image=document.querySelector("#im");
+        let butun=document.querySelector("#btn");
+        butun.value="ON";
+        if(butun.value=="OFF"){
+            image.src="images/bulb2.jpg";
+            image.style.height="300px";
+        }
+        else{
+            image.src="images/bulb1.png";
+            butun.value="OFF";
+            butun.style.backgroundColor="red";
+
+        }
+        
+        
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .watch{
+            height:200px;
+            width:400px;
+            border: 2px solid #000;
+            margin: 100px auto;
+            background-color:black ;
+            border-radius: 20px;
+        }
+        .watch1{
+            height:60%;
+            width:100%;
+           display: flex;
+           justify-content: space-evenly;
+           align-items: flex-end;
+        }
+        .watch-1{
+            height: 50px;
+            width: 60px;
+            border: 5px dotted #138c97;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 200;
+            color: red;
+        }
+        .watch2{
+            height:40%;
+            width:100%;
+            display: flex;
+           justify-content: space-evenly;
+           align-items: flex-start;
+        }
+        .watch2 h4{
+            color:green;
+        }
+        h1{
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body onload="clock()">
+    <div class="watch">
+        <div class="watch1">
+            <div class="watch-1" id="hh"></div>
+            <div class="watch-1" id="mm"></div>
+            <div class="watch-1" id="ss"></div>
+            <div class="watch-1" id="ses"></div>
+        </div>
+        <div class="watch2">
+            <h4>Hours</h4>
+            <h4>Minutes</h4>
+            <h4>Seconds</h4>
+            <h4>session</h4>
+        </div>
+    </div>
+    <h1 align="center">Digital Clock</h1>
+    <script>
+        let clock=()=>{
+            let d=new Date();
+            let h=d.getHours();
+            let m=d.getMinutes();
+            let s=d.getSeconds();
+            let session="AM";
+            if(h>=12){
+                h=h-12;//this block of code is used for changing time format from 24 hours to 12 hours;
+            }
+            if(h>12){
+                session="PM";
+            }
+            h=h<10? "0" + h : h;
+            m=m<10 ? "0"+ m : m;
+            s=s<10? "0" + s : s;
+            let hours=h;
+            let minutes=m;
+            let seconds=s;
+            let sess=session;
+            //document.write(time);
+            let hh=document.querySelector("#hh");
+            let mm=document.querySelector("#mm");
+            let ss=document.querySelector("#ss");
+            let ses=document.querySelector("#ses");
+            ses.innerHTML=sess;
+            hh.innerHTML=hours;
+            mm.innerHTML=minutes;
+            ss.innerHTML=seconds;
+
+            // let printClock=document.querySelector("#h");
+            // printClock.innerHTML=time;
+          
+        }
+        setInterval("clock()",1000);
+    </script>
+</body>
+</html>

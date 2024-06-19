@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            height: 400px;
+            width: 400px;
+            border: 2px solid #000;
+            margin: 50px auto;
+        }
+        .butuns{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back{
+            background-color: red;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">Text</div>
+    <div class="butuns">
+    <button id="btn1">ADD</button>
+    <button id="btn2">Remove</button>
+    <button id="btn3">TOOGLE</button>
+    </div>
+    <script>
+        let d1=document.querySelector(".d1");
+        let b1=document.querySelector("#btn1");
+        let b2=document.querySelector("#btn2");
+        let b3=document.querySelector("#btn3");
+        b1.addEventListener("click",()=>{
+            d1.classList.add("back");
+        })
+        b2.addEventListener("click",()=>{
+            d1.classList.remove("back");
+        })
+        b3.addEventListener("click",()=>{
+            d1.classList.toggle("back");//toogle add only one property at a time;
+        })
+    </script>
+</body>
+</html>

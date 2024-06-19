@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--get element by class name//
+
+//1.it is use to get the value of a given element by using their class name.//
+//2.it show the multiple class at one time in array form in console.-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 class="h1">Techsima Solution Private Limited</h1> 
+   <h2 class="h1">Techsima Solution Private Limited</h2> 
+   <h3 class="h1">Techsima Solution Private Limited</h3>
+   <p>Raj Singh</p>
+   <p>Raj Singh</p>
+   <p>Raj Singh</p>
+   <p>Raj Singh</p>
+   <p>Raj Singh</p>
+   <script>
+   const raj= document.getElementsByClassName("h1");
+   console.log(raj.textContent);
+   const tagname=document.getElementsByTagName("p");
+   for(let i=0;i<tagname.length;i++){
+    console.log(tagname[i].innerHTML);
+   }
+   alert(`The Length Of a Given Tag Name is=${tagname.length}`);
+   </script>
+</body>
+</html>
+ 

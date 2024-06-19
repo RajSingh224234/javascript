@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/1.JPG"  id="im" height="300px">
+    <img src="images/b2.jpg" id="im2" height="300px">
+    <button onclick="imagewrap()">Wrap</button>
+    <script>
+        const imagewrap=()=>{
+        let img1=document.querySelector("#im");
+        let img2=document.querySelector("#im2");
+        let image1=img1.src;
+        let image2=img2.src;
+        img1.src=image2;
+        img2.src=image1;
+        }
+    </script>
+</body>
+</html>

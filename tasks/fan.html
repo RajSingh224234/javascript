@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Fan</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .fan{
+            height:500px;
+            width: 500px;
+            margin:0px auto;
+        }
+        .fan1{
+            height: 33%;
+            width: 33%;
+            border: 5px solid #000;
+            margin: 0px auto;
+            border-radius: 50%;
+            background-color: red;
+        }
+        .fan1 img{
+            height:100%;
+            width:100%;
+            padding:10px;
+            animation:fans linear infinite;
+        }
+        @keyframes fans {
+            100%{transform: rotate(360deg);}
+        }
+        .fan2{
+            height:33%;
+            width: 5%;
+            border: 10px solid orange;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: 0px auto;
+            background-color: green;
+        }
+        .fan3{
+            height:100px;
+            width: 200px;
+            border-radius: 100px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="fan">
+        <div class="fan1" id="pankha">
+            <img src="images/fan.png" id="fanimg" >
+        </div>
+        <div class="fan2"></div>
+        <div class="fan3">
+            <div class="input">
+                <input type="submit" id="btn1" value="ON" style="background-color: green; height:30px;width: 30px;color:#fff"  onclick="buttons1()" >
+                <input type="submit" id="btn3" value="1" style="height:30px;width: 20px;color:#000" onclick="buttons3()">
+                <input type="submit" id="btn4" value="2" style="height:30px;width: 20px;color:#000" onclick="buttons4()">
+                <input type="submit" id="btn5" value="3" style="height:30px;width: 20px;color:#000" onclick="buttons5()">
+                <input type="submit" id="btn5" value="4" style="height:30px;width: 20px;color:#000" onclick="buttons6()">
+                <input type="submit" id="btn5" value="5" style="height:30px;width: 20px;color:#000" onclick="buttons7()">
+            </div>
+        </div>
+    </div>
+    <script>
+        let buttons1=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn1");
+            if(butun1.value=="ON"){
+                butun1.value="OFF";
+                butun1.style.backgroundColor="red";
+                pankha1.style.animationDuration=1+"s";
+
+            }
+            else{
+                butun1.value="ON";
+                pankha1.style.animationDuration=0+"s";
+                butun1.style.backgroundColor="green";
+            }
+            
+        }
+        let buttons3=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn3");
+            pankha1.style.animationDuration=0.9+"s";
+            alert("Your Fan Speed Is 1");
+        }
+        let buttons4=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn4");
+            pankha1.style.animationDuration=0.7+"s";
+            alert("Your Fan Speed Is 2");
+            
+        }
+        let buttons5=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn5");
+            pankha1.style.animationDuration=0.5+"s";
+            alert("Your Fan Speed Is 3");
+            
+        }
+        let buttons6=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn6");
+            pankha1.style.animationDuration=0.3+"s";
+            alert("Your Fan Speed Is 4");
+            
+        }
+        let buttons7=()=>{
+            let pankha1=document.querySelector("#fanimg");
+            let butun1=document.querySelector("#btn7");
+            pankha1.style.animationDuration=0.1+"s";
+            alert("Your Fan Speed Is 5");
+            
+        }
+    </script>
+</body>
+</html>

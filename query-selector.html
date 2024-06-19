@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    Query Selector():it's get the element using js.
+    syntax:
+    ----------
+    document.queryselector("tagName")//using tag selector;
+    document.queryselector(".className")//using class selector;
+    document.queryselector("#id Name")//using id selector;
+    note:this property is used on particular single selector;
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Techsima Sulution Private Limited</p>
+    <p>Techsima Sulution Private Limited</p>
+    <p>Techsima Sulution Private Limited</p>
+    <p>Techsima Sulution Private Limited</p>
+    <p class="para">Techsima Sulution Private Limited 435</p>
+    <script>
+       let g=document.querySelectorAll("p");//it can print only one time;
+    //    console.log(g.innerHTML);
+    //    let gen=document.getElementsByTagName("p")
+    //    for(let i=0;i<g.length;i++){
+    //     console.log(gen[i].innerHTML);//it can't be printed due to query selector;
+    //    }
+    //    let h=document.querySelectorAll("p",".para");//it can print multiple time;
+    //    console.log(h[0].innerHTML);//tag name
+    //    console.log(h[4].innerHTML);//accesing class name;
+    //    let hi=document.getElementsByTagName("p")
+    //    for(let i=0;i<h.length;i++){
+    //     console.log(hi[i].innerHTML);//it will also print;
+    //    }
+   for(let k=0;k<g.length;k++){
+    g[k].innerHTML="raj singh";
+   }
+    </script>
+</body>
+</html>

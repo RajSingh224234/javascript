@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* my name */
+#name{
+   margin-block:50px 10px;
+   margin-inline:500px;
+   position: relative;
+   width: 200px;
+}
+#para-1{
+    position: absolute;
+    left: 300px;
+    display: none;
+}
+
+/* myname end */
+
+/* father's name */
+#fname{
+    margin-block:25px 10px;
+    margin-inline:500px;
+    position: relative;
+    width: 200px;
+ }
+ #para-2{
+     position: absolute;
+     left: 300px;
+     display: none;
+ }
+ 
+/* father's name end */
+
+/* mother's name */
+#mname{
+    margin-block:25px 10px;
+    margin-inline:500px;
+    position: relative;
+    width: 200px;
+ }
+ #para-3{
+     position: absolute;
+     left: 500px;
+     display: none;
+ }
+ 
+/* mother's name end */
+
+
+/* profession name */
+#pname{
+    margin-block:25px 10px;
+    margin-inline:500px;
+    position: relative;
+    width: 200px;
+ }
+ #para-4{
+     position: absolute;
+     left: 500px;
+     display: none;
+ }
+ 
+/* profession name end */

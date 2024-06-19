@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    height:400px;
+    width:400px;
+    border: 2px solid #000;
+    margin: 50px auto;
+    background-color: teal;
+}
+#name{
+    margin-top:70px;
+}
+#user{
+    height:40px;
+    width: 70%;
+    margin-top: 50px;
+    margin-inline:60px;
+    padding-inline:20px;
+    font-size: 24px;
+}
+#pass{
+    height:40px;
+    width: 70%;
+    margin-top: 20px;
+    margin-inline:60px;
+    padding-inline:20px;
+    font-size: 24px;
+}
+#check{
+    margin-inline: 60px;
+    margin-top: 20px;
+}
+.btn{
+    padding-inline: 40px;
+    padding-block: 5px;
+    margin-top: 40px;
+}

@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+/* Login Form start here */
+.form1{
+    height: 300px;
+    width: 300px;
+    margin: 40px auto;
+    box-shadow:0px 0px 10px 5px chocolate;
+    background-color:palevioletred;
+    border-radius: 5px;
+}
+
+#input1{
+   height:40px;
+   width:80%; 
+   margin: 30px 30px 10px 30px;
+   border: 2px solid palevioletred;
+}
+#inpt1{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+#input2{
+    height:40px;
+    width:80%; 
+    margin: 30px;
+    border: 2px solid palevioletred;
+    display: flex;
+ }
+ .icon1{
+    height:100%;
+    width:90%;
+    background-color: red;
+ }
+ #inpt2{
+    height:100%;
+    width:100%;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ .icon2{
+    height:100%;
+    width: 20%;
+    background:url(images/hide.png);
+    background-color: #fff;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+ }
+ #btn{
+    margin:20px 40px 40px 100px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 15px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 20px;
+ }
+ /* login form end here */
+ .form2{
+    height: 890px;
+    width: 500px;
+    margin: 40px auto;
+    box-shadow:0px 0px 10px 5px lightcoral;
+    background-color:tomato;
+    border-radius: 5px;
+    display: none;
+}
+ #input2-1{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-1{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-2{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-2{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-3{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-3{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-4{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-4{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-5{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-5{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-6{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-6{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-7{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-7{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+ #input2-8{
+    height:40px;
+    width:80%; 
+    margin: 50px;
+    border: 2px solid tomato;
+ }
+ #inpt1-8{
+    height:100%;
+    width:100%;;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
+#btn2{
+    margin:20px 40px 40px 210px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 15px;
+    background-color: skyblue;
+    border: none;
+    border-radius: 20px;
+ }
+ /* SignIn form start here */
+.main{
+display: flex;
+align-items: center;
+justify-content: center;
+ }
+ #sign{
+    margin:20px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 15px;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+ }
+ #log{
+    margin:20px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 15px;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+ }

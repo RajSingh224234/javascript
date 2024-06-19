@@ -1,0 +1,161 @@
+<html>
+      <head>
+	       <title>Login Form</title>
+		   <style>
+	             *{
+				   padding:0px ;
+				   margin:0px;
+				   box-sizing:border-box;
+				 }
+                body{
+				   display:flex;
+				   justify-content:center;
+				   align-items:center;
+				   background:aqua;
+				}
+              h1{
+			    text-align:center;
+				color:green;
+				padding-top:40px;
+			  }				
+               .outer-form{
+			          width:600px;
+					  height:600px;
+			          background:#eee;
+					  border-radius:20px;
+					  display:flxe;
+					  justify-content:center;
+					  align-items:center;
+                      position:relative;
+			   }	
+               form{
+			      display:flex;
+				  flex-direction:column;
+				  justify-content:center;
+				  padding:45px;
+			   }
+             form label{
+				   color:green;
+				   font-size:18px;
+				  padding:3px;
+			 }
+             form input{
+			       width:500px;
+				   height:40px;
+				   padding-left:20px;
+			 }
+            button{
+			    width:120px;
+				height:40px;
+				background:aqua;
+				color:green;
+				border-radius:10px;
+				font-size:20px;
+			}
+			/* #pwd{
+			   position:relative;
+			} */
+			#eye{
+			     height:4.5vmin;
+				 width:5.5vmin;
+				 position:absolute;
+                 top: 240px;
+                 right: 69px;
+				 
+			}
+			
+			.cpt{
+			   padding:3vmin;
+			   position:relative;
+			}
+			.cpt span{
+			   font-style:italic;
+			   text-decoration:line-through;
+			   font-size:5vmin;
+			}
+			.cpt img{
+			    height:6vmin;
+				width:6vmin;
+				position:absolute;
+				top:25%;
+				right:16%;
+			}
+            p{
+                font-size: 20px;
+            }
+		   </style>
+	  </head>
+	  <body>
+	       <div class="outer-form">
+		      <h1>Login Form</h1>
+                
+                    
+              <form>
+                	<label for="uname">User Name</label>
+				   <input type="text" name="unmae" id="unmae"><br>
+				   <label for="pwd">Password</label>
+				   <input type="password" name="pwd"  id="pwd">
+				   <img id="eye" src="images/hide.png" onclick="img()">
+				   <div class="cpt" id="cpt-match">
+                    <span id="refcaptcha">ABCDS</span>
+                    <img id="refresh" onclick="imagerefresh()" src="images/resfresh.png"></div>
+				   <input type="text" name="captcha"  id="matchcaptcha" placeholder="enter captch code." ><br>
+                  
+				   <input type="submit" onsubmit="return submitdata()">
+               
+		   </form>
+           <p id="message"></p>
+           <script>
+                let img=()=>{
+                let image=document.querySelector("#eye");
+                let pwd=document.querySelector("#pwd")
+                if(pwd.type == "password"){
+                    pwd.type="text"
+                    image.src="images/show.png";
+                }
+                else{
+                    image.src="images/hide.png";
+                    pwd.type="password"
+                
+                }
+            }
+            function captcha(){
+                let char="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                let charText=" ";
+                for(let i=0; i<6; i++){
+                    // charText= charText+char.(Math.random()); 
+                    charText=charText+char.charAt(Math.floor(Math.random()*char.length));
+                    
+                }
+                // console.log(charText);
+                document.querySelector("#refcaptcha").textContent=charText;
+            }
+            captcha();
+
+            function imagerefresh(){
+                document.querySelector("#refcaptcha").textContent=" ";
+                captcha(); 
+                
+            }
+
+            function submitdata(){
+                let showcaptcha=document.querySelector("#refcaptcha").textContent;
+                // alert(showcaptcha);
+                let match=document.querySelector("#matchcaptcha").value;
+                // alert(match);
+                let msg=document.querySelector("#message");
+                if(showcaptcha==matchcaptcha){
+                    msg.innerHTML="Valid Captcha"; 
+                    matchcaptcha.value.style.color="green";
+                }
+                else{
+                    msg.innerHTML="Invalid Captcha";
+                    matchcaptcha.value.style.color="red";
+                }
+                return false;
+            }
+
+
+           </script>
+	    </body>
+</html>
